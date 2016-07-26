@@ -1,35 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Custom Node.js cartridge for OpenShift</title>
-  <meta name="description" content="Custom cartridge for OpenShift providing the lastest version of Node.js.">
-  <meta name="keywords" content="Node.js, JavaScript, ES6, OpenShift, es6, paas">
-  <meta name="author" content="Ionut-Cristian Florescu">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link href='https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono' rel='stylesheet' type='text/css'>
-  <link href="main.css" rel="stylesheet">
+<title> Learning about Websites </title>
 </head>
+
 <body>
-  <header>
-    <a href="https://github.com/icflorescu/openshift-cartridge-nodejs"><img class="fork" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
-    <p>This is a</p>
-    <img class="logo" title="Node.js" src="nodejs-logo.svg">
-    <p>application running in a <a href="https://github.com/icflorescu/openshift-cartridge-nodejs" target="_blank">custom cartridge</a> on</p>
-    <img class="logo" title="OpenShift Online Logo" src="openshift-online-logo.svg">
-  </header>
-  <main>
-    <info type="gen"></info>
-    <info type="poll"></info>
-  </main>
-  <footer>
-    <p>Developed by <a href="https://github.com/icflorescu" target="_blank">Ionut-Cristian Florescu</a> and released under the <a href="https://github.com/icflorescu/openshift-cartridge-nodejs/blob/master/LICENSE">ISC License</a>.</p>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/riot/2.4.1/riot+compiler.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/superagent/0.18.0/superagent.min.js"></script>
-  <script type="riot/tag" src="info.tag"></script>
-  <script>
-    riot.mount('*')
-  </script>
+
+<h1>Learning to code websites from Enoch on <a href="https://www.youtube.com/watch?v=y3UH2gAhwPI">Youtube</a></h1>
+
+<h2><a name="toc1"></a>Table of Contents</h2>
+<p>
+    <a href="#body"><strong>Learning about the body</strong></a><br />
+    <a href="#paragraphs"><strong>Using paragraphs</strong></a><br />
+    <a href="#fonts"><strong>Fonts</strong></a><br />
+    <a href="#links"><strong>Using Links</strong></a><br />
+    <a href="#toc2"><strong>How to make a table of contents</strong></a>
+</p>
+
+<h3><a name="body"></a>Learning about the body</h3>
+<p>
+    I am in the body, 
+    <br /> the body tag is &ltbody&gt &lt/body&gt
+    <br /> to line break, use &ltbr /&gt
+    <br /> and on a side note, to write tags as plain text, use
+    <br /> &amplt for < (less than) and use
+    <br /> &ampgt for < (greater than) 
+    <br /> and use amp after &amp to show &amp like this, &ampamp
+    <br /> Coding websites it all about using tags so throughout this webpage, tags will be shown and how to use those tags.
+</p>
+
+<hr />
+
+<h3><a name="paragraphs"></a>Using paragraphs</h3>
+
+<p> This is paragraph 1, the paragraph tag is &ltp&gt&lt/p&gt </p>
+<p> 
+    This is paragraph 2 
+    <br /> to create a horizontal line, or in proper terms, a horizontal rule, use &lthr /&gt
+    , this is how I seperated the headers
+</p>
+
+<hr /><h3><a name="fonts"> Fonts </h3>
+<p>
+    Now to learn about fonts, to use
+    <br /> <strong>Bold</strong>, use &ltstrong&gt&lt/strong&gt
+    <br /> e.g. I am <strong>strong</strong> as <strong>Escanor!</strong>
+    <br /> <em>Italics</em>, use &ltem&gt&lt/em&gt
+    <br /> e.g. This is such a <em>sexy</em> website <em>;)</em>
+    <br /> To comment things out in the html file, use &lt!-- <em>Insert comments here</em> --&gt
+    <br /> Commenting helps the developer keep notes of things that needs attention
+</p>
+<!-- This is the comment section where I just learned to comment -->
+
+<hr /><h3><a name="links"> Using Links </h3>
+
+<p>
+    Surround a text with &lta&gt&lt/a&gt to create a link, a stands for anchor
+    <br /> using href inside the first bracket, you can set the link to href="<em>somewebsite</em>"
+    <br /> e.g. &lta href="http://google.com"&gt will create a link to <a href="http://google.com">google.com</a>
+    <br /> You can link to your own pages in your directory as well, link them by doing
+    <br /> &lta href="newpage.html"&gt which will link to this <a href="newpage.html">new page</a>
+</p>
+
+<hr /><h3><a name="toc2"></a> How to make a table of contents </h3>
+
+<p>
+    Making a table of contents is similar to creating links but instead of referrencing to links, you referrence to certain parts of your page by using name tags. To create a name tag, you must put a &lta name="<em>Whatever name tag you want</em>"&gt&lta/&gt in a section of your page where you want the jump to occur. To link the "jump", surround a text with &lta href="#<em>name tag</em>"&gt<em>text used for link</em>&lt/a&gt
+    <br /><br />e.g. I created the name tag "toc1" in the header for Table of Contents in the beggining of the page. &lth2&gt&lta name="toc1"&gt&lta/&gtTable of Contents&lt/h2&gt. 
+    <br />This <a href="#toc1">link</a> will go to the table of contents. &lta href=#"toc1"&gtlink&lt/a&gt
+</p>
+
 </body>
+
 </html>
