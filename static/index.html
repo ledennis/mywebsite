@@ -20,9 +20,10 @@
     <a href="#fonts"><strong>Fonts</strong></a><br />
     <a href="#links"><strong>Using Links</strong></a><br />
     <a href="#toc2"><strong>How to make a table of contents</strong></a><br />
-    <a href="characters.html"><strong>How to type certain characters to show up as text</strong></a><br />
     <a href="#email"><strong>How to link an email and use tags</strong></a><br />
     <a href="#images"><strong>Images</strong></a><br />
+
+    <a href="characters.html"><strong>How to type certain characters to show up as text</strong></a><br />
 
 </p>
 
@@ -34,7 +35,7 @@
 <hr /><h3><a name="intro"></a>Introduction</h3>
 <p>
   Hello my name is Dennis Le and I am learning how to make a website through a youtube video by Bucky Roberts.
-  <br /> Here is the <a href="https://www.youtube.com/watch?v=y3UH2gAhwPI">link</a>.
+  <br /> Here is the link to the <a href="https://www.youtube.com/watch?v=y3UH2gAhwPI">video</a>.
   <br /> As I learn, I will be typing down notes and hopefully further improve this website as I go along the video.
   <br /> A HTML starts with a basic document like this:
   <br /> &lt!DOCTYPE html&gt
@@ -105,7 +106,7 @@
 
 <p>
     Making a table of contents is similar to creating links but instead of referrencing to links, you referrence to certain parts of your page by using name tags. To create a name tag, you must put a &lta name="<em>Whatever name tag you want</em>"&gt&lta/&gt in a section of your page where you want the jump to occur. To link the "jump", surround a text with &lta href="#<em>name tag</em>"&gt<em>text used for link</em>&lt/a&gt
-    <br /><br />e.g. I created the name tag "toc1" in the header for Table of Contents in the beggining of the page. &lth2&gt&lta name="toc1"&gt&lta/&gtTable of Contents&lt/h2&gt. 
+    <br /><br />e.g. I created the name tag "toc1" in the header for Table of Contents in the beginning of the page. &lth2&gt&lta name="toc1"&gt&lta/&gtTable of Contents&lt/h2&gt. 
     <br />This <a href="#toc1">link</a> will go to the table of contents. &lta href=#"toc1"&gtlink&lt/a&gt
 </p>
 
@@ -119,10 +120,17 @@
 
 <hr /><h3><a name="images"></a>Images</h3>
 <p>
-  To add an image to your website, you must first have your image file in the directory where the html file is in.
-  <br /> Then you can use the image tag, &ltimg src="<em>imageName.imageType</em>"&gt&lt/img&gt
+  To add an image to your website, you must first have your image file in the directory where the html file is in or have an address to the link.
+  <br /> Then you can use the image tag, &ltimg src="<em>imageName.imageType</em>"&gt&lt/img&gt or &ltimg src="<em>imageAddress</em>"&gt&lt/img&gt
   <br />This is an image of me.
   <br /><img src="https://lh3.googleusercontent.com/-a9aJ4moIqNc/VsO9Dje8YMI/AAAAAAAAANs/nFqWXhoo-u0_VIlNBoFORnp_1UF0v3RRACEw/w140-h140-p/NewPicture.png" title="Dennis Le"></p>
+  <br /> Images can also be used as links, just enclose the img tag with an anchor tag. &lta href=""&gt&ltimg src =""&gt&lt/img&gt&lt/a&gt
+  <br /> The img tag has more attributes as well:
+  <br /> src: where the image is
+  <br /> height: height of the image
+  <br /> width: width of the image
+  <br /> title: tooltip
+  <br /> The bigger the image size, the longer it will take to load, even if the size of the image is changed, it will take the same amount of time if it was the normal size.
 </p>
 
 </body>
