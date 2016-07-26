@@ -11,23 +11,61 @@
 
 <h2><a name="toc1"></a>Table of Contents</h2>
 <p>
+    <!-- Copy and Paste for new content:
+    <a href="#TAG"><strong>TITLE</strong></a><br />
+      -->
+    <a href="#intro"><strong>Introduction</strong></a><br />
     <a href="#body"><strong>Learning about the body</strong></a><br />
     <a href="#paragraphs"><strong>Using paragraphs</strong></a><br />
     <a href="#fonts"><strong>Fonts</strong></a><br />
     <a href="#links"><strong>Using Links</strong></a><br />
-    <a href="#toc2"><strong>How to make a table of contents</strong></a>
+    <a href="#toc2"><strong>How to make a table of contents</strong></a><br />
+    <a href="characters.html"><strong>How to type certain characters to show up as text</strong></a><br />
+    <a href="#email"><strong>How to link an email and use tags</strong></a><br />
+    <a href="#images"><strong>Images</strong></a><br />
+
 </p>
 
-<h3><a name="body"></a>Learning about the body</h3>
+<!-- Copy and Paste for a new header and paragraph 
+<hr /><h3><a name="TAG"></a>TITLE</h3>
+<p></p>
+-->
+
+<hr /><h3><a name="intro"></a>Introduction</h3>
+<p>
+  Hello my name is Dennis Le and I am learning how to make a website through a youtube video by Bucky Roberts.
+  <br /> Here is the <a href="https://www.youtube.com/watch?v=y3UH2gAhwPI">link</a>.
+  <br /> As I learn, I will be typing down notes and hopefully further improve this website as I go along the video.
+  <br /> A HTML starts with a basic document like this:
+  <br /> &lt!DOCTYPE html&gt
+  <br /> &lthtml&gt
+  <br /> &lthead&gt
+  <br /> &nbsp;&nbsp;&nbsp;&nbsp;&lttitle&gt&lt/title&gt
+  <br /> &lt/head&gt
+  <br /> &ltbody&gt
+  <br /> &lt/body&gt
+  <br /> &lt/html&gt
+  <br /> Everything from in this website so far is coded in the body tag.
+</p>
+
+<hr /><h3><a name="body"></a>Learning about the body</h3>
 <p>
     I am in the body, 
     <br /> the body tag is &ltbody&gt &lt/body&gt
     <br /> to line break, use &ltbr /&gt
-    <br /> and on a side note, to write tags as plain text, use
-    <br /> &amplt for < (less than) and use
-    <br /> &ampgt for < (greater than) 
-    <br /> and use amp after &amp to show &amp like this, &ampamp
-    <br /> Coding websites it all about using tags so throughout this webpage, tags will be shown and how to use those tags.
+    <br /> Every header is typed out as &lth*&gt&lt/h*&gt, where the * can represent a number from 1 through 6, 1 being the largest and 6 being the smallest. Here are examples.
+    <br /><h1>Header 1</h1>
+    <br /><h2>Header 2</h2>
+    <br /><h3>Header 3</h3>
+    <br /><h4>Header 4</h4>
+    <br /><h5>Header 5</h5>
+    <br /><h6>Header 6</h6>
+    <br /> Coding websites it all about using tags so throughout this webpage, tags will be shown and how to use those tags. Tags can also have attributes, which can be used to expand the uses of a tag.
+    <br /> So far the &lta&gt&lt/a&gt tag has 3 attributes:
+    <br /> href: which references to websites
+    <br /> name: which is used to create name tags
+    <br /> title: creates a tooltip for more information
+
 </p>
 
 <hr />
@@ -41,7 +79,7 @@
     , this is how I seperated the headers
 </p>
 
-<hr /><h3><a name="fonts"> Fonts </h3>
+<hr /><h3><a name="fonts"></a> Fonts </h3>
 <p>
     Now to learn about fonts, to use
     <br /> <strong>Bold</strong>, use &ltstrong&gt&lt/strong&gt
@@ -53,7 +91,7 @@
 </p>
 <!-- This is the comment section where I just learned to comment -->
 
-<hr /><h3><a name="links"> Using Links </h3>
+<hr /><h3><a name="links"></a> Using Links </h3>
 
 <p>
     Surround a text with &lta&gt&lt/a&gt to create a link, a stands for anchor
@@ -69,6 +107,22 @@
     Making a table of contents is similar to creating links but instead of referrencing to links, you referrence to certain parts of your page by using name tags. To create a name tag, you must put a &lta name="<em>Whatever name tag you want</em>"&gt&lta/&gt in a section of your page where you want the jump to occur. To link the "jump", surround a text with &lta href="#<em>name tag</em>"&gt<em>text used for link</em>&lt/a&gt
     <br /><br />e.g. I created the name tag "toc1" in the header for Table of Contents in the beggining of the page. &lth2&gt&lta name="toc1"&gt&lta/&gtTable of Contents&lt/h2&gt. 
     <br />This <a href="#toc1">link</a> will go to the table of contents. &lta href=#"toc1"&gtlink&lt/a&gt
+</p>
+
+<hr /><h3><a name="email"></a>How to link an email and use tags</h3>
+<p>
+  You can also create an email link that will basically open your default emailing program to send an email to. However this may seem inconvenient to the user since it's annoying when a program is opened, rather than opening their own email and messaging from there.
+  <br /> To do this, there is another referencing method. &lta href="mailto:<em>someEmail@.com</em>"&gt<em>someText</em>&lt/a&gt
+  <br /><br /> Tags can be used so that information pops up when a cursor is hovering over a link. It is one of the attributes to the anchor tag, used as &lta title="<em>Information</em>"&gt&lt/a&gt
+  <br /> This is a <a href= "#email" title="OMG DIS TAG DOE">tag</a>.
+</p>
+
+<hr /><h3><a name="images"></a>Images</h3>
+<p>
+  To add an image to your website, you must first have your image file in the directory where the html file is in.
+  <br /> Then you can use the image tag, &ltimg src="<em>imageName.imageType</em>"&gt&lt/img&gt
+  <br />This is an image of me.
+  <br /><img src="myImage.jpg" title="Dennis Le"></p>
 </p>
 
 </body>
