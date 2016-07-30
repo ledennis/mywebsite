@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> L2 Coding Websites</title>
+    <style type="text/css">
+        p {color:black;
+           line-height:130%; 
+        }
+        h3 {color:#D82A2A;}
+    </style>
+</head>
+
+<body>
+
+<h1 style="text-align:center;">Learning to Code Websites pt.2</h1>
+
+<h2><a name="toc1"></a>Table of Contents</h2>
+<p>
+    <!-- Copy and Paste for new content:
+    <a href="#TAG">TITLE</a><br />
+      -->
+  <table border="1">
+    <tr>
+      <td style="width:250px; vertical-align:top; font-weight:bold;">
+        <a href="index.html#toc1">Part 1</a><br />
+        <a href="index.html#intro">Introduction</a><br />
+        <a href="index.html#body">Learning About the Body</a><br />
+        <a href="index.html#paragraphs">Using Paragraphs</a><br />
+        <a href="index.html#fonts">Fonts</a><br />
+        <a href="index.html#links">Using Links</a><br />
+        <a href="index.html#toc2">How to Make a Table of Contents</a><br />
+        <a href="index.html#email">How to Link an Email and Use Pop Up Tags</a><br />
+        <a href="index.html#images">Images</a><br />
+        <a href="characters.html">How to Type Certain Characters in HTML to Show Up as Text</a><br />
+      </td>
+      <td style="width:250px; vertical-align:top; font-weight:bold;">
+        <a href="index2.html">Part 2</a><br />
+        <a href="#tables">Creating a Table</a><br />
+        <a href="#lists">Creating a List</a><br />
+        <a href="#diff">Difference between HTML and CSS</a><br />
+        <a href="#css">Using CSS</a><br />
+        <a href="#bgImg">Using Image as a Background</a><br />
+
+      </td>
+    </tr>
+  </table>
+
+</p>
+
+<!-- Copy and Paste for a new header and paragraph 
+<hr /><h3><a name="TAG"></a>TITLE</h3>
+<p></p>
+-->
+
+<!-- Copy and Paste for characters
+&lt&gt
+<br />
+&nbsp;
+ -->
+
+<hr /><h3><a name="tables"></a>Creating a Table</h3>
+    <p>
+        To create an organized table, there is a table tag, &lttable&gt&lt/table&gt. Within the tags, rows and columns can be created using &lttr&gt&lt/tr&gt for rows and &lttd&gt&lt/td&gt for columns. The column tag can be place in a row tag to create columns. It would look like this.
+        <br /> &lttable&gt
+        <br />&nbsp;&nbsp;&lttr&gt
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&lttd&gt&lt/td&gt
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&lttd&gt&lt/td&gt
+        <br />&nbsp;&nbsp;&lt/tr&gt
+        <br /> &lttable&gt
+        <br />This is a table with one row and two column.
+        <br /><br /> The table tag also has a boreder attribute that can be set with a certain pixel thickness. eg. &lttable border="<em>pixel thickness</em>"&gt&lt/table&gt. Headers can be added to tables to help label the rows as well. The tag for table headers is &ltth&gt&lt/th&gt. Headers are basically centered and bolded font and are placed within the table row tag.
+        <br /> Here is an example of a table with two rows and three columns per row with a border thickness of 2.
+        <table border="2">
+            <tr>
+                <th>One</th>
+                <th>Two</th>
+                <th>Three</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </table>
+
+        <br />Tables can also be seperated more intrically by using an attribute called colspan, which specifies how much columns a header/row will have.
+        <table border="2">
+            <tr>
+                <th colspan="1">One</th>
+                <th colspan="2">Two</th>
+                <th colspan="3">Three</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>2</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+        </table>
+
+        <br /> Width can also be changed. A table's width will default to the longest text of a box entry. The table tag has a "width" attribute to adjust the width, &lttable width="<em>pixel number or percentage</em>"&gt. If a percentage is used, the width will adjust to the size of the website.
+        <br /> To make a table more spacious, adjust the table's cellpadding attribute. There is also a cellspacing attribute that gives more space between each cell, which makes the border seem thicker.
+    </p>
+
+<hr /><h3><a name="lists"></a>Creating a List</h3>
+    <p>
+        A bulleted list tag is &ltul&gt&lt/ul&gt, which stands for unordered list. To insert items into the list, use the list item tag, &ltli&gt&lt/li&gt. 
+        <br /> Here is a bulleted list.
+        <ul>
+            <li>Oranges</li>
+            <li>Potatoes</li>
+            <li>Chicken</li>
+            <li>Balloons</li>
+        </ul>
+
+        <br /> An ordered list tag is &ltol&gt&lt/ol&gt. 
+        <br /> Here is an ordered list.
+        <ol>
+            <li>Oranges</li>
+            <li>Potatoes</li>
+            <li>Chicken</li>
+            <li>Balloons</li>
+        </ol>
+    </p>
+
+<hr /><h3><a name="diff"></a>Difference between HTML and CSS</h3>
+    <p>
+        This may be long overdue but HTML stands for Hyper Text Markup Language and is essentially the core building blocks for website. Everything up until now has been coded in HTML. I am now an hour and thirty-five minutes into the video and he is describing CSS, which stands for Cascading Style Sheet, and it is described as what makes the website pretty. CSS is the layout, color, scheme, and anything else that styles the website.
+    </p>
+
+<hr /><h3><a name="css"></a>Using CSS</h3>
+    <p>
+        When writing code for CCS, you're essentially making a document filled with desgins and schemes. The CSS tag is &ltstyle&gt&lt/style&gt and it must be in within the header tag with the type attribute set as text/css.
+        <br /> 
+        &lthead&gt<br />
+        &nbsp;&nbsp;&ltstyle type="text/css"&gt <br />
+        &nbsp;&nbsp;&lt/style&gt <br />
+        &lthead&gt
+        <br />
+        Within the style tag, properties can be changed to certain tags. For example, if there is a type of font color that a developer wants to use for the paragraph tag, it can be set in the CSS portion and that style will be used for the page. In summary, a selector is used to select what properties are meant to be changed given a certain value. The p tag is the selector, color is the property, and blue is the value that the property is set to.<br />
+        &nbsp;&nbsp;p {color:blue;}<br />
+        &nbsp;&nbsp;This would make every paragraph's font color blue.<br />
+        More properties can be changed by putting more attributes after the semicolon. Colors can also be set to rgb values if there is a specific color wanted. There are a lot of different properties that can be changed through CSS so looking up a specific properties would probably be the best option to find a unique style. Style can also be added to any section of a body or the body itself to have it's own theme. As a side note, my HTML is bad because I have been using line breaks instead of adding more paragraph tags, which might make styling the website easier, I will code taking this into consideration from now on. <br />
+
+    </p>
+
+<hr /><h3><a name="bgImg"></a>Using Image as a Background</h3>
+    <p>
+        To change the background of your website, in the style sheet, add this selector. <br />
+        &nbsp;&nbsp;body{ <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-image:url(<em>nameOfImg or ImgAddress</em>);<br />
+        } <br />
+    </p>
+    <p>
+        If the image is smaller than the background size, the image will tile itself. To turn this off, add the property "background-repeat:no;". The images can also be repeated along the x-axis by setting background-repeat:repeat-x or repeated along the y-axis using background-repeat:repeat-y. The position of an image can also be set by using background-position: <em>(distance from the left)</em> <em>(distance from the top)</em>. 
+    </p>
+
+</body>
+</html>
