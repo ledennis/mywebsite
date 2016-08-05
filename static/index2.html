@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> L2 Coding Websites</title>
+    <title> L2 Code Websites</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <style type="text/css">
-        p {color:black;
-           line-height:130%; 
-        }
-        h3 {color:#D82A2A;}
+        span {color:blue; font-weight: bold; font-family: verdana;}
+        .red {background-color:red;}
+        .blue {background-color:blue;}
+        .white {background-color:white;}
+        .col {width: 100px;
+              text-align: center;}
     </style>
 </head>
 
 <body>
 
-<h1 style="text-align:center;">Learning to Code Websites pt.2</h1>
+<h1>Learning to Code Websites pt.2</h1>
 
 <h2><a name="toc1"></a>Table of Contents</h2>
 <p>
@@ -22,16 +25,18 @@
   <table border="1">
     <tr>
       <td style="width:250px; vertical-align:top; font-weight:bold;">
-        <a href="index.html#toc1">Part 1</a><br />
+        <a href="index.html">Part 1</a><br />
         <a href="index.html#intro">Introduction</a><br />
         <a href="index.html#body">Learning About the Body</a><br />
         <a href="index.html#paragraphs">Using Paragraphs</a><br />
         <a href="index.html#fonts">Fonts</a><br />
         <a href="index.html#links">Using Links</a><br />
         <a href="index.html#toc2">How to Make a Table of Contents</a><br />
-        <a href="index.html#email">How to Link an Email and Use Pop Up Tags</a><br />
+        <a href="index.html#email">How to Link an Email and Use Pop Up Tags</a>
+        <br />
         <a href="index.html#images">Images</a><br />
-        <a href="characters.html">How to Type Certain Characters in HTML to Show Up as Text</a><br />
+        <a href="characters.html">How to Type Certain Characters in HTML to Show
+         Up as Text</a><br />
       </td>
       <td style="width:250px; vertical-align:top; font-weight:bold;">
         <a href="index2.html">Part 2</a><br />
@@ -40,7 +45,15 @@
         <a href="#diff">Difference between HTML and CSS</a><br />
         <a href="#css">Using CSS</a><br />
         <a href="#bgImg">Using Image as a Background</a><br />
-
+        <a href="#text">Information About Text</a><br />
+        <a href="#span">Span</a><br />
+        <a href="#div">Div</a><br />
+        <a href="#linksAdv">Links Advanced</a><br />
+        <a href="#pseudo">Pseudo Elements</a><br />
+        <a href="#sheet">Creating a File for Style</a><br />
+      </td>
+      <td>
+        <a href="index3.html">Part 3</a><br />
       </td>
     </tr>
   </table>
@@ -49,7 +62,7 @@
 
 <!-- Copy and Paste for a new header and paragraph 
 <hr /><h3><a name="TAG"></a>TITLE</h3>
-<p></p>
+    <p></p>
 -->
 
 <!-- Copy and Paste for characters
@@ -60,7 +73,10 @@
 
 <hr /><h3><a name="tables"></a>Creating a Table</h3>
     <p>
-        To create an organized table, there is a table tag, &lttable&gt&lt/table&gt. Within the tags, rows and columns can be created using &lttr&gt&lt/tr&gt for rows and &lttd&gt&lt/td&gt for columns. The column tag can be place in a row tag to create columns. It would look like this.
+        To create an organized table, there is a table tag, &lttable&gt&lt/table
+        &gt. Within the tags, rows and columns can be created using &lttr&gt&lt/
+        tr&gt for rows and &lttd&gt&lt/td&gt for columns. The column tag can be 
+        place in a row tag to create columns. It would look like this.
         <br /> &lttable&gt
         <br />&nbsp;&nbsp;&lttr&gt
         <br />&nbsp;&nbsp;&nbsp;&nbsp;&lttd&gt&lt/td&gt
@@ -68,8 +84,14 @@
         <br />&nbsp;&nbsp;&lt/tr&gt
         <br /> &lttable&gt
         <br />This is a table with one row and two column.
-        <br /><br /> The table tag also has a boreder attribute that can be set with a certain pixel thickness. eg. &lttable border="<em>pixel thickness</em>"&gt&lt/table&gt. Headers can be added to tables to help label the rows as well. The tag for table headers is &ltth&gt&lt/th&gt. Headers are basically centered and bolded font and are placed within the table row tag.
-        <br /> Here is an example of a table with two rows and three columns per row with a border thickness of 2.
+        <br /><br /> The table tag also has a boreder attribute that can be set 
+        with a certain pixel thickness. eg. &lttable border="<em>pixel thickness
+        </em>"&gt&lt/table&gt. Headers can be added to tables to help label the 
+        rows as well. The tag for table headers is &ltth&gt&lt/th&gt. Headers 
+        are basically centered and bolded font and are placed within the table 
+        row tag.
+        <br /> Here is an example of a table with two rows and three columns per
+         row with a border thickness of 2.
         <table border="2">
             <tr>
                 <th>One</th>
@@ -77,13 +99,14 @@
                 <th>Three</th>
             </tr>
             <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
+                <td class="col">1</td>
+                <td class="col">2</td>
+                <td class="col">3</td>
             </tr>
         </table>
 
-        <br />Tables can also be seperated more intrically by using an attribute called colspan, which specifies how much columns a header/row will have.
+        <br />Tables can also be seperated more intrically by using an attribute
+         called colspan, which specifies how much columns a header/row will have.
         <table border="2">
             <tr>
                 <th colspan="1">One</th>
@@ -91,22 +114,30 @@
                 <th colspan="3">Three</th>
             </tr>
             <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3</td>
-                <td>3</td>
-                <td>3</td>
+                <td class="col">1</td>
+                <td class="col">2</td>
+                <td class="col">2</td>
+                <td class="col">3</td>
+                <td class="col">3</td>
+                <td class="col">3</td>
             </tr>
         </table>
 
-        <br /> Width can also be changed. A table's width will default to the longest text of a box entry. The table tag has a "width" attribute to adjust the width, &lttable width="<em>pixel number or percentage</em>"&gt. If a percentage is used, the width will adjust to the size of the website.
-        <br /> To make a table more spacious, adjust the table's cellpadding attribute. There is also a cellspacing attribute that gives more space between each cell, which makes the border seem thicker.
+        <br /> Width can also be changed. A table's width will default to the 
+        longest text of a box entry. The table tag has a "width" attribute to 
+        adjust the width, &lttable width="<em>pixel number or percentage</em>"
+        &gt. If a percentage is used, the width will adjust to the size of the 
+        website.
+        <br /> To make a table more spacious, adjust the table's cellpadding 
+        attribute. There is also a cellspacing attribute that gives more space 
+        between each cell, which makes the border seem thicker.
     </p>
 
 <hr /><h3><a name="lists"></a>Creating a List</h3>
     <p>
-        A bulleted list tag is &ltul&gt&lt/ul&gt, which stands for unordered list. To insert items into the list, use the list item tag, &ltli&gt&lt/li&gt. 
+        A bulleted list tag is &ltul&gt&lt/ul&gt, which stands for unordered 
+        list. To insert items into the list, use the list item tag, 
+        &ltli&gt&lt/li&gt. 
         <br /> Here is a bulleted list.
         <ul>
             <li>Oranges</li>
@@ -127,35 +158,178 @@
 
 <hr /><h3><a name="diff"></a>Difference between HTML and CSS</h3>
     <p>
-        This may be long overdue but HTML stands for Hyper Text Markup Language and is essentially the core building blocks for website. Everything up until now has been coded in HTML. I am now an hour and thirty-five minutes into the video and he is describing CSS, which stands for Cascading Style Sheet, and it is described as what makes the website pretty. CSS is the layout, color, scheme, and anything else that styles the website.
+        This may be long overdue but HTML stands for Hyper Text Markup Language 
+        and is essentially the core building blocks for website. Everything up 
+        until now has been coded in HTML. I am now an hour and thirty-five 
+        minutes into the video and he is describing CSS, which stands for 
+        Cascading Style Sheet, and it is described as what makes the website 
+        pretty. CSS is the layout, color, scheme, and anything else that styles 
+        the website.
     </p>
 
 <hr /><h3><a name="css"></a>Using CSS</h3>
     <p>
-        When writing code for CCS, you're essentially making a document filled with desgins and schemes. The CSS tag is &ltstyle&gt&lt/style&gt and it must be in within the header tag with the type attribute set as text/css.
+        When writing code for CCS, you're essentially making a document filled 
+        with desgins and schemes. The CSS tag is &ltstyle&gt&lt/style&gt and it 
+        must be in within the header tag with the type attribute set as 
+        text/css.
         <br /> 
         &lthead&gt<br />
         &nbsp;&nbsp;&ltstyle type="text/css"&gt <br />
         &nbsp;&nbsp;&lt/style&gt <br />
         &lthead&gt
         <br />
-        Within the style tag, properties can be changed to certain tags. For example, if there is a type of font color that a developer wants to use for the paragraph tag, it can be set in the CSS portion and that style will be used for the page. In summary, a selector is used to select what properties are meant to be changed given a certain value. The p tag is the selector, color is the property, and blue is the value that the property is set to.<br />
+        Within the style tag, properties can be changed to certain tags. For 
+        example, if there is a type of font color that a developer wants to use 
+        for the paragraph tag, it can be set in the CSS portion and that style 
+        will be used for the page. In summary, a selector is used to select what 
+        properties are meant to be changed given a certain value. The p tag is 
+        the selector, color is the property, and blue is the value that the 
+        property is set to.<br />
         &nbsp;&nbsp;p {color:blue;}<br />
         &nbsp;&nbsp;This would make every paragraph's font color blue.<br />
-        More properties can be changed by putting more attributes after the semicolon. Colors can also be set to rgb values if there is a specific color wanted. There are a lot of different properties that can be changed through CSS so looking up a specific properties would probably be the best option to find a unique style. Style can also be added to any section of a body or the body itself to have it's own theme. As a side note, my HTML is bad because I have been using line breaks instead of adding more paragraph tags, which might make styling the website easier, I will code taking this into consideration from now on. <br />
+        More properties can be changed by putting more attributes after the 
+        semicolon. Colors can also be set to rgb values if there is a specific 
+        color wanted. There are a lot of different properties that can be 
+        changed through CSS so looking up a specific properties would probably 
+        be the best option to find a unique style. Style can also be added to 
+        any section of a body or the body itself to have it's own theme. As a 
+        side note, my HTML is bad because I have been using line breaks instead 
+        of adding more paragraph tags, which might make styling the website 
+        easier, I will code taking this into consideration from now on. <br />
 
     </p>
 
 <hr /><h3><a name="bgImg"></a>Using Image as a Background</h3>
     <p>
-        To change the background of your website, in the style sheet, add this selector. <br />
+        To change the background of your website, in the style sheet, add this 
+        selector. <br />
         &nbsp;&nbsp;body{ <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;background-image:url(<em>nameOfImg or ImgAddress</em>);<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;background-image:url(<em>nameOfImg or 
+        ImgAddress</em>);<br />
         } <br />
     </p>
     <p>
-        If the image is smaller than the background size, the image will tile itself. To turn this off, add the property "background-repeat:no;". The images can also be repeated along the x-axis by setting background-repeat:repeat-x or repeated along the y-axis using background-repeat:repeat-y. The position of an image can also be set by using background-position: <em>(distance from the left)</em> <em>(distance from the top)</em>. 
+        If the image is smaller than the background size, the image will tile 
+        itself. To turn this off, add the property "background-repeat:no;". The 
+        images can also be repeated along the x-axis by setting 
+        background-repeat:repeat-x or repeated along the y-axis using 
+        background-repeat:repeat-y. The position of an image can also be set by 
+        using background-position: <em>(distance from the left)</em> <em>
+        (distance from the top)</em>. 
     </p>
 
+<hr /><h3><a name="text"></a>Information About Text</h3>
+    <p style="background-color:red; color:white; width: 875px;">
+        There are a lot of miscellaneous information to do with the text. 
+        When designing how text should look, these are the things to consider.
+        <br />
+        <ul>
+            <li>Size - Size of text</li>
+            <li>Font - Style of text</li>
+            <li>Cell Padding - How much white space is around text</li>
+            <li>Borders - Outline of area of text</li>
+            <li>Margin - Distance between other boxes of texts</li>
+            <li>Color - Color of text</li>
+            <li>Background - Visual behind text</li>
+            <li>Width - Width area for text</li>
+            <li>Height - Height for area of text</li>
+        </ul>
+    </p>
+
+<hr /><h3><a name="span"></a>Spans and Classes</h3>
+    <p>
+        A span is essentially a custom tag that can be used in the style sheet 
+        so that only certain parts of text will be changed. The tag for span is 
+        &ltspan&gt&lt/span&gt. This is a <span>random sentence</span> to show 
+        the use of span, abra <span>kadabra</span> alakazam. Spans are helpful 
+        since it allows easier customization of your website.<br />
+        Classes are also customizable but is used more like a style. Classes are 
+        represented by a period and the name of the class is what is after the 
+        period. They are created in the style sheet and can be customized after 
+        the name. <br />
+        .thisClass {<em>custom class settings</em>}<br />
+        They are used in any tag that has a section. So tags like headers, 
+        paragraphs, and the body tags. Classes are useful if there is a certain 
+        style you want to create.<br />
+        <table border="1" width="200px">
+            <tr class="red">
+                <td height="5px"></td>
+            </tr>
+            <tr class="white">
+                <td height="5px"></td>
+            </tr>
+            <tr class="blue">
+                <td height="5px"></td>
+            </tr>
+        </table><br />
+        Each row has a different class. To use classes, after the main tag, type
+        class="<em>className</em>".
+
+    </p>
+
+<hr /><h3><a name="div"></a>Div</h3>
+    <p>
+        Divs are special because they are boxes that can be set anywhere on the 
+        page using coordinates. Divs is the layout for most website and anything 
+        can be placed inside a div. They are created in the style sheet and used 
+        with the tag &ltdiv&gt&lt/div&gt. Here is an example of a custom div. 
+        <br /><br />
+        div {border:2px solid red;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;position:absolute;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;width:300px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;height:300px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;top:40px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;left:35px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+        Divs can also be seperated like classes, so if you want to create 
+        multiple divs, it is possible. To create a div, instead of using a 
+        period like you would for classes, you would instead use a hashtag. 
+        So under the style sheet, #<em>divName</em> {<em>custom div settings
+        </em>}. This identifies the divs and to use a specific div, use the id 
+        attribute. <br />
+        &ltdiv id="<em>divName</em>"&gt&lt/div&gt
+
+    </p>
+<hr /><h3><a name="linksAdv"></a>Links Advanced</h3>
+    <p>
+        As you may recall, links are creating using the &lta&gt tag. Since this 
+        is the part of the tutorial where there is more information on 
+        customization, there is a technique to specialize certain links. For 
+        example if you wanted to customize links that are contained in headers 
+        and only those links, than within the style sheet, h1 > a {<em>custom 
+        link setting</em>}, would only change the links that have to deal with 
+        the h1 header. It is a parent child relation ship and only affects the 
+        children of that parent. <br />
+        Also links come in three parts, the stage before it is clicked, the 
+        stage while it is clicked, and the stage after it is clicked, and all of 
+        these settings can be changed as well.<br />
+    </p>
+<hr /><h3><a name="pseudo"></a>Pseudo Elements</h3>
+    <p>
+        There are certain attributes that can be used in the style sheet called 
+        pseudo elements. There elements are basically pre set style's that can 
+        affect certain bodies of text. For example there is a first-letter 
+        pseudo element that can change the style of the first letter of all 
+        paragraphs. <br />
+        p:first-letter {<em>style</em>} <br />
+        A random insertion of the definition of pseudo from 
+        <a href="http://www.dictionary.com/browse/pseudo">dictionary.com</a> 
+        because why not. pseudo - almost, approaching, or trying to be.
+    </p>
+<hr /><h3><a name="sheet"></a>Creating a File for Style</h3>
+    <p>
+        So up until now, I have been setting up the style sheet in the header of 
+        the HTML file. There is another way to use a style sheet rather than 
+        putting it in the header, which is by creating a CSS file. Using one CSS 
+        ile is more beneficial because it would be much easier to edit a style 
+        sheet through one file than through twenty different headers. To use a 
+        CSS file, the file must end in <strong>.css</strong>. To incorporate it 
+        into the HTML file, use a link file in the head tag, 
+        &ltlink rel="stylesheet" type="text/css" href="<em>name of CSS 
+        file</em>"&gt.
+    </p>
+    <p>As a side note, if there are two styles for anything, the last one that 
+    was coded in will be used and the the ones before it.</p>
 </body>
 </html>
