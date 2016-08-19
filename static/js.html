@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>L2 JS</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jsCSS.css">
+</head>
+
+<!-- Copy and Pasta for Title
+        <h1 class="content"></h1>
+ -->
+
+
+<body class="page">
+    <div id="header">Learning Javascript</div>
+    <div id="container">
+
+        <h1 class="content"> Introduction </h1>
+            <p> Hello there, my name is Dennis Le and I will be creating a 
+            tutorial for Javascript as I follow along an online tutorial on 
+            youtube by LearnCode.academy. Here is the 
+            <a href="https://www.youtube.com/playlist?list=PLoYCgNOIyGACnrXwo5HMCfOH9VT05znGv">
+            link</a> to the videos. This will be a continuation website of when 
+            I previously learned HTML and CSS. Here is a 
+            <a href="http://mywebsite-ledennis.rhcloud.com/">link</a> to my 
+            starting website and I hope this website looks better than my old 
+            one. I also know basic programming skills like the comparison 
+            operators so I will be skipping that part in the video tutorials.
+            </p>
+
+        <h1 class="content">How to Incorporate Javascript</h1>
+            <p>
+                So to start, to use .js files inside of your HTML file, the
+                script tag is needed and also the location of the .js file. 
+                Just like how you would add your .css file by linking it, you
+                can link a .js by adding it before the end of the body tag using
+                this. 
+            </p><br />
+            <div id="code">
+            &ltscript src="<em>locationOfJSFile</em>"&gt&lt/script
+            &gt</div>
+            
+        <h1 class="content">Functions</h1>
+            <p>
+                According to the video, functions are pieces of code that 
+                perform one or more actions. To create a function, you must 
+                declare that it is a function and follow it up with a name.
+            </p>
+            <div id="code">
+            function <em>functionName</em>(){
+            <br /><em>code</em><br /><br />}
+            </div>
+
+        <h1 class="content">Arrays</h1>
+            <p>
+                Arrays are basically containers for anything in coding. They can
+                hold any variables and even functions. In javascript, an array 
+                is created by using brackets. To access elements inside of the
+                array, use the name followed by a bracket with the index number
+                of the element inside the array.
+            </p>
+            <div id="code">
+                var myArray = [1, 'apples', <em>someFunction</em>]<br />
+                myArray[1] returns apples
+            </div><br />
+            <p>
+                Arrays also have methods that can be used to perform functions
+                specifically for arrays.
+            </p> 
+            <div id="code">
+                myArray.shift() will remove and use/
+                display the first element in the array. <br /><br />
+                myArray.forEach
+                (function(value, index)) {  <em>function</em>
+                <br />}
+                <br /> can be used to use
+                a function for every element inside the array.
+            </div>
+            
+        <h1 class="content">Javascript Selectors</h1>
+            <p>
+                They way Javascript uses a webpage to create functions for is by
+                going through the Document Object Model or DOM. The DOM is the
+                Javascript representation of the HTML website. The API that goes
+                with the DOM can be used to find elements in a website. These
+                methods are usually called by using document.<em>methodNAme</em>
+                .
+            </p>
+            <div id="code">
+                document.getElementsByTagName('<em>tag</em>'): returns an array
+                of elements that has the tag name. Can be stored in variables.
+            </div>
+
+        <h1 class="content">Javascript Events</h1>
+            <p>
+                An event is anything that a user does to interact with the
+                website. Examples of events are whenever the user mouses over 
+                something, or clicks on something, and basically anything else
+                the user does. I'll be following along the tutorial and will be
+                creating an adding application.
+            </p><br />
+            <p>
+                Adding Numbers<br />
+                <input id="num-one"> + <input id="num-two">
+            </p><br />
+            <p id="add-sum"></p><br />
+            <p>
+                To create the adding feauture, an input was needed to get the
+                user input and then event listeners were added to know whenever
+                a number was entered. Listeners can wait for these kind of 
+                events:
+            </p>
+            <div id="code">
+                <h2>Events</h2>
+                <ul style="list-style: none">
+                    <li>mouseenter: when mouse enters</li>
+                    <li>mouseleave: when mouse leaves</li>
+                    <li>mousedown: when mouse moves down</li>
+                    <li>mouseup: when mouse moves up</li>
+                    <li>mousemove: whenever mouse moves around</li>
+                    <li>keyup: when up key is entered</li>
+                    <li>keydown: when down key is entered</li>
+                    <li>click: when area is clicked</li>
+                    <li>focus: after something is clicked</li>
+                    <li>blur: after something is left</li>
+                </ul>
+            </div>
+            <p>
+                There are a lot more events that can be triggered so if there is
+                any trigger events that you want, you can probably look it up.
+                <br />
+                This is the code for adding numbers.
+            </p>
+            <div id="code">
+                <h2>HTML Code for Add Program</h2><br />
+                &ltp&gtAdding Numbers&ltbr /&gt<br />
+                &ltinput id="num-one"&gt + &ltinput id="num-two"&gt<br />
+                &lt/p&gt<br />
+                &ltp id="add-sum"&gt&lt/p&gt&lt<br />
+            </div>
+                <p class="sub">
+                    The HTML code is pretty straightforwad, there are two input
+                    elements that take in the user input and they are ID'd 
+                    accordingly so that they can be found and used in the 
+                    Javascript file.
+                </p>
+            <div id="code">
+                <h2>Javascript Code for Add Program</h2><br />
+                var numOne = document.getElementById("num-one");<br />
+                var numTwo = document.getElementById("num-two");<br />
+                var addSum = document.getElementById("add-sum");<br />
+                <br />
+                numOne.addEventListener("blur", add);<br />
+                numTwo.addEventListener("blur", add);<br />
+                <br />
+                function add() {<br />
+                &nbsp;&nbsp;var one = parseFloat(numOne.value) || 0;<br />
+                &nbsp;&nbsp;var two = parseFloat(numTwo.value) || 0;<br />
+                &nbsp;&nbsp;addSum.innerHTML = "Your sum is " + (one + two);<br />
+                }<br />
+            </div><br />
+                <p class="sub">
+                    For the Javascript portion, we used selectors to find the
+                    input elements in the HTML and stored them in two variables.
+                    Afterwords two even listeners are created that are triggered
+                    by the "blur" event, which adds after the user clicks 
+                    ouside of the input field. The add function uses the 
+                    variables that have the inputs stored and converts it into
+                    a Float value using parseFloat(). The or operator is used
+                    so that if a number is not used in the input field, 0 will
+                    be added instead. We can change the HTML code of the addSum
+                    by changing it's innerHTML, which is how the added values 
+                    are shown.
+                </p>
+            <br /><br /><br />
+            <p>
+                List Editor - Click Items to Change Them! <br /><br />
+                <ul id="checklist" style="padding-left:200px;">
+                    <li>
+                        <span>Apples</span>
+                        <input value="Apples" />
+                    </li>
+                    <li>
+                        <span>Oranges</span>
+                        <input value="Oranges" />
+                    </li>
+                    <li>
+                        <span>Bananas</span>
+                        <input value="Bananas" />
+                    </li>
+                </ul> <br /><br />
+            </p>
+            <div id="code">
+                <h2>CSS Code for List Editor</h2><br />
+                li input {<br />
+                &nbsp;&nbsp;display: none;<br />
+                }<br />
+                <br />
+                li.edit span {<br />
+                &nbsp;&nbsp;display: none;<br />
+                }<br />
+                <br />
+                li.edit input {<br />
+                &nbsp;&nbsp;display: initial;<br />
+                }<br />
+            </div>
+            <p class="sub">
+                This CSS trick basically hides the input field and the two edit
+                class for li can be used to switch between on and off.
+            </p>
+
+            <div id="code">
+                <h2>HTML Code for List Editor</h2><br />
+                List Editor &ltbr /&gt&ltbr /&gt<br />
+                &ltul id="checklist" style="padding-left:200px;"&gt<br />
+                &nbsp;&nbsp;&ltli&gt<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&ltspan&gtApples&lt/span&gt<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&ltinput value="Apples" /&gt<br />
+                &nbsp;&nbsp;&lt/li&gt<br />
+                &nbsp;&nbsp;&ltli&gt<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&ltspan&gtOranges&lt/span&gt<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&ltinput value="Oranges" /&gt<br />
+                &nbsp;&nbsp;&lt/li&gt<br />
+                &nbsp;&nbsp;&ltli&gt<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&ltspan&gtBananas&lt/span&gt<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&ltinput value="Bananas" /&gt<br />
+                &nbsp;&nbsp;&lt/li&gt<br />
+                &lt/ul&gt<br />
+            </div>
+            <p class="sub">
+                This is a basic unordered list with the checklist being ID'd
+                and there is an input value so that we can use that for user
+                input later.
+            </p>
+
+            <div id="code">
+                <h2>Javascript Code for List Editor</h2><br/>
+                var checklist = document.getElementById("checklist");<br />
+                <br />
+                var items = checklist.querySelectorAll("li");<br />
+                var inputs = checklist.querySelectorAll("input");<br />
+                <br />
+                <br />
+                for (var i = 0; i < items.length; i++) {<br />
+                &nbsp;&nbsp;items[i].addEventListener("click", editItem);<br />
+                &nbsp;&nbsp;inputs[i].addEventListener("blur", updateItem);<br />
+                &nbsp;&nbsp;inputs[i].addEventListener("keypress", itemKeyPress);<br />
+                }<br />
+                <br />
+                function editItem() {<br />
+                &nbsp;&nbsp;this.className = "edit";<br />
+                &nbsp;&nbsp;var input = this.querySelector("input");<br />
+                &nbsp;&nbsp;input.focus();<br />
+                &nbsp;&nbsp;input.setSelectionRange(0, input.va)<br />
+                }<br />
+                <br />
+                function updateItem() {<br />
+                &nbsp;&nbsp;this.previousElementSibling.innerHTML = this.value;<br />
+                &nbsp;&nbsp;this.parentNode.className = "";<br />
+                }<br />
+                <br />
+                function itemKeyPress(event) {<br />
+                &nbsp;&nbsp;if (event.which === 13) {<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;updateItem.call(this);<br />
+                &nbsp;&nbsp;}<br />
+                }<br />
+            </div>
+            <p class="sub">
+                There are three listening events, one for when an item in the
+                list is clicked, one for when the mouse leaves the input field
+                after, and a keypress event for the enter key. When an item is
+                clicked, the input field replaces the text and afterwards the
+                text is updated after a value is entered or clicked out of.
+            </p>
+
+
+    </div>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="scripts/add.js"></script>
+    <script type="text/javascript" src="scripts/list.js"></script>
+</body>
+</html>
