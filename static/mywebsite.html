@@ -9,7 +9,12 @@
 
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/personalWebsite.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,7 +25,8 @@
   </head>
   <body>
     
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
+    <!-- Fixed Header -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -49,20 +55,91 @@
                       <li><a href="#">Three</a>
                   </ul>
               </li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#contact" data-toggle="modal">Contact</a></li>
             </ul>
           </div>
       </div>
 
     </div>
 
+    <!-- Body -->
+    <div class="container">
+      <div class="jumbotron text-center">
+        <h1>About Me</h1>
+        <p>Working on dis custom website</p>
+        <a href="#" class="btn btn-primary">Butt</a>
+        <a href="#" class="btn btn-success">On!</a>
+        <a href="#" class="btn btn-danger">=</a>
+        <a href="#" class="btn btn-warning">Button!</a>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <a href="#" class="thumbnail">
+            <img class="center-block" src="img/pika1.png" alt="Cute Pikachu Number 1">
+          </a>
+          <h3>Pika 1</h3>
+          <p>Blah blah blah blah Blah blah blah blah Blah blah blah blah
+          Blah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah
+          Blah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah 
+          </p>
+          <a href="#" class="btn btn-danger">View</a>
+        </div>
+        <div class="col-md-4">
+          <a href="#" class="thumbnail">
+            <img src="img/myImage.jpg" alt="Normal Asian Human">
+          </a>
+          <h3>Asian</h3>
+          <p>Blah blah blah blah Blah blah blah blah Blah blah blah blah
+          Blah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah
+          Blah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah 
+          </p>
+          <a href="#" class="btn btn-danger">View</a>
+        </div>
+        <div class="col-md-4">
+          <a href="#" class="thumbnail">
+            <img src="img/pika2.jpg" alt="Cute Pikachu Number 2">
+          </a>
+          <h3>Pika 2</h3>
+          <p>Blah blah blah blah Blah blah blah blah Blah blah blah blah
+          Blah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah
+          Blah blah blah blahBlah blah blah blahBlah blah blah blahBlah blah 
+          </p>
+          <a href="#" class="btn btn-danger">View</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fixed Footer -->
     <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
         <div class="container">
             <div class="navbar-text pull-left">
                 <p>2016</p>
             </div>
+            <div class="navbar-text pull-right">
+              <a href="https://www.facebook.com/dennis.le.92775"><i class="fa fa-facebook-square fa-2x"></i></a>
+              <a href="https://github.com/ledennis"><i class="fa fa-github-square fa-2x"></i></a>
+              <a href="https://www.linkedin.com/in/dennis-le-8ba344101?trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin-square fa-2x"></i></a>
+            </div>
         </div>
 
+    </div>
+
+    <div class="modal fade" id="contact" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Contact</h4>
+          </div>
+          <div class="modal-body">
+            <p>For modal inquiries contact a random squirrel</p>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-primary" data-dismiss="modal">
+              Close
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
